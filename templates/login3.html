@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/static/assets/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/login3.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div>
+      <ul class="nav">
+        <li onclick="showLogin()">Login</li>
+        <li onclick="showSignup()">Sign up</li>
+        <li onclick="showForgotPassword()">Forgot password</li>
+        <li onclick="showSubscribe()">Subscribe</li>
+        <li onclick="showContactUs()">Contact us</li>
+      </ul>
+      <div class="wrapper">
+        <div class="rec-prism">
+          <div class="face face-top">
+            <div class="content">
+              <h2>Subscribe</h2>
+              <small>Enter your email so we can send you the latest updates!</small>
+              <form id="subscribe" method="post">
+                <div class="field-wrapper">
+                  <input required id="subscribe-email" type="text" name="email" placeholder="email" />
+                  <label>e-mail</label>
+                </div>
+                <div class="field-wrapper">
+                  <input id="id-subscribe" type="submit" onclick="showThankYou(event)" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="face face-front">
+            <div class="content">
+              <h2>Sign in</h2>
+              <form id="signin" method="post">
+                <div class="field-wrapper">
+                  <input required id="signin-email" type="text" name="username" placeholder="username" />
+                  <label>username</label>
+                </div>
+                <div class="field-wrapper">
+                  <input required id="signin-password" type="password" name="password" placeholder="password" />
+                  <label>password</label>
+                </div>
+                <div class="field-wrapper">
+                  <input id="id-sign-in" type="submit" onclick="showThankYou(event)" />
+                </div>
+                <span class="psw" onclick="showForgotPassword()">Forgot Password? </span>
+                <span class="signup" onclick="showSignup()">Not a user? Sign up</span>
+              </form>
+            </div>
+          </div>
+          <div class="face face-back">
+            <div class="content">
+              <h2>Forgot your password?</h2>
+              <small>Enter your email so we can send you a reset link for your password</small>
+              <form id="forgot_password" method="post">
+                <div class="field-wrapper">
+                  <input required id="forgot_pass_email" type="text" name="email" placeholder="email" />
+                  <label>e-mail</label>
+                </div>
+                <div class="field-wrapper">
+                  <input id="id-forgot_pass" type="submit" onclick="showThankYou(event)" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="face face-right">
+            <div class="content">
+              <h2>Sign up</h2>
+              <form id="sign_up" method="post">
+                <div class="field-wrapper">
+                  <input required id="sign_up_email" type="text" name="email" placeholder="email" />
+                  <label>e-mail</label>
+                </div>
+                <div class="field-wrapper">
+                  <input required id="sign_up_pass" type="password" name="password" placeholder="password" />
+                  <label>password</label>
+                </div>
+                <div class="field-wrapper">
+                  <input required id="sign_up_pass2" type="password" name="password2" placeholder="password" />
+                  <label>re-enter password</label>
+                </div>
+                <div class="field-wrapper">
+                  <input id="id-sign_up" type="submit" onclick="showThankYou(event)" />
+                </div>
+                <span class="singin" onclick="showLogin()">Already a user? Sign in</span>
+              </form>
+            </div>
+          </div>
+          <div class="face face-left">
+            <div class="content">
+              <h2>Contact us</h2>
+              <form id="contact_form" method="post">
+                <div class="field-wrapper">
+                  <input required id="contact_form_name" type="text" name="name" placeholder="name" />
+                  <label>Name</label>
+                </div>
+                <div class="field-wrapper">
+                  <input required id="contact_form_email" type="text" name="email" placeholder="email" />
+                  <label>e-mail</label>
+                </div>
+                <div class="field-wrapper">
+                  <textarea required id="contact_form_message" placeholder="your message"></textarea>
+                  <label>your message</label>
+                </div>
+                <div class="field-wrapper">
+                  <input id="id-contact" type="submit" onclick="showThankYou(event)" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="face face-bottom">
+            <div class="content">
+              <div id="thank-u-msg" class="thank-you-msg">Thank you!</div>
+              <div id="sse_msg" class="sse_msg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/js/login3.js"></script>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+#container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  grid-gap: 50px;
+  padding: 10px;
+  cursor: default;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px #000;
+  padding-bottom: 5px;
+}
+
+.image {
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.address {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px #000;
+}
+
+.stars {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px #000;
+  padding-bottom: 30px;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px #000;
+}
+
+.image-holder {
+  position: relative;
+}
+
+.image-holder:hover .image {
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  opacity: 0.3;
+}
+
+.image-holder:hover .book-now {
+  opacity: 1;
+}
+
+.book-now {
+  position: absolute;
+  opacity: 0;
+  transition: 1.5s ease;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border: none;
+  outline: none !important;
+}
+
+#nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(7, 173, 144);
+  padding: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
+
+#mid-nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  cursor: default;
+  color: #fff;
+}
+
+#mid-nav-items div:hover {
+  color: #fff;
+}
+
+#main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 30px;
+  cursor: default;
+}
+
+.logout-button:hover {
+  color: rgb(218, 47, 47);
+  text-decoration: none;
+}
+
+.mid-nav-item {
+  display: inline-block;
+  position: relative;
+}
+
+.mid-nav-item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.mid-nav-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.pagination > .active > a {
+  background-color: rgb(7, 173, 144) !important;
+  border-color: rgb(7, 173, 144) !important;
+}
+
+.pagination > li > a,
+.pagination > li > a:hover {
+  color: #7f8e9a;
+  border-radius: 100%;
+  margin: 0 5px;
+}
+
+.pagination {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.pagination > li > a:hover,
+.pagination > li > a:active {
+  box-shadow: 0 0 10px rgb(7, 173, 144);
+  -webkit-box-shadow: 0 0 10px rgb(7, 173, 144);
+}
+
+#left-nav-logo {
+  color: #fff;
+  cursor: pointer;
+}
+
+#right-nav-logout {
+  position: relative;
+}
+
+#menu-svg {
+  color: #fff;
+  width: 25px;
+  height: 25px;
+}
+
+#menu-svg:hover {
+  /* add scale to cog */
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #000;
+  padding: 10px;
+  list-style-type: none;
+}
+
+.nav-dropdown li a {
+  text-decoration: none;
+}
+
+.nav-li {
+  width: 100px;
+}
+
+#scroll-to-top {
+  position: fixed;
+  display: none;
+  bottom: 40px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(7, 173, 144, 0.8);
+  cursor: pointer;
+  transform: scale(1);
+  animation: pulse-arrow 1s 2;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+#scroll-to-top:hover {
+  background-color: rgb(7, 173, 144, 0.8);
+  animation: pulse-arrow 2s infinite;
+}
+
+@keyframes pulse-arrow {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(7, 173, 144, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  /* 100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  } */
+}
+
+#scroll-to-top svg {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

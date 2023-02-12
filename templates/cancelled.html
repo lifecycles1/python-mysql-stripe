@@ -1,0 +1,50 @@
+<!-- templates/cancelled.html -->
+
+{% extends "base.html" %} {% block content %}
+<div>
+  <div id="nav-container" class="">
+    <div id="left-nav-logo">LOGO</div>
+    <div id="mid-nav-items">
+      <div class="mid-nav-item">Locations</div>
+      <div class="mid-nav-item">My Stays</div>
+      <div class="mid-nav-item">Offers</div>
+      <div class="mid-nav-item">Meetings</div>
+      <div class="mid-nav-item">Our Brands</div>
+      <div class="mid-nav-item">Rewards</div>
+    </div>
+    <div id="right-nav-logout">
+      <svg id="menu-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="0.5"
+          d="M14 21h-4l-.551-2.48a6.991 6.991 0 0 1-1.819-1.05l-2.424.763-2-3.464 1.872-1.718a7.055 7.055 0 0 1 0-2.1L3.206 9.232l2-3.464 2.424.763A6.992 6.992 0 0 1 9.45 5.48L10 3h4l.551 2.48a6.992 6.992 0 0 1 1.819 1.05l2.424-.763 2 3.464-1.872 1.718a7.05 7.05 0 0 1 0 2.1l1.872 1.718-2 3.464-2.424-.763a6.99 6.99 0 0 1-1.819 1.052L14 21z"
+        />
+        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="0.5" />
+      </svg>
+      <ul class="nav-dropdown">
+        <li class="nav-li">
+          <a class="nav-a" href="/profile">Profile</a>
+        </li>
+        <li class="nav-li">
+          <a class="logout-button" href="/logout">Sign out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <section class="section">
+      <div class="container">
+        <p>Your payment was cancelled.</p>
+      </div>
+    </section>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script>
+  $("#left-nav-logo").click(function () {
+    window.location.replace("/");
+  });
+</script>
+{% endblock %}
